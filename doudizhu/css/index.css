@@ -1,0 +1,475 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+input{
+	border: none;
+}
+
+/*=====背景视频盒子=======*/
+.box2{
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+/*=====背景视频=======*/
+.box4{
+	position: absolute;
+    display: block;
+    min-height: 105%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    left: 0;
+    /*top: -120px;*/
+}
+
+li{
+	list-style: none;
+	cursor: pointer;
+}
+/*======玩家1区域（左侧）======*/
+.left{
+	width:20%;
+	height: 800px;
+	float: left;
+	transform-style:preserve-3d;
+}
+
+.mid{
+	width:60%;
+	height: 800px;
+	float: left;
+
+}
+
+/*========游戏桌面=======*/
+.mid_top{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+
+/*========玩家2区域（中间）=======*/
+.mid_end{
+	width: 100%;
+	height: 300px;
+	float: left;
+	position: relative;
+}
+/*========玩家3区域（右侧）=======*/
+.right{
+	width:20%;
+	height: 800px;
+	float: right;
+	/*background: yellow;*/
+}
+
+/*=======底分、倍数背景=======*/
+.score{
+	width: 200px;
+	height: 75px;
+	background: url('../images/倍数.png') ;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 1200px;
+	top: 0px;
+	display: none;
+}
+/*=======底分分值显示=======*/
+.multiple{
+	position: absolute;
+	left: 158px;
+	top: 27px;
+	color: blue;
+	font-size: 18px;
+}
+/*=======倍数数值显示=======*/
+.lowScore{
+	position: absolute;
+	left: 83px;
+	top: 27px;
+	color: blue;
+	font-size: 18px;
+}
+
+
+/*=======牌堆=========*/
+.all_poker{
+	width: 125px;
+	height: 175px;
+	margin: 100px auto 0px;
+	position: relative;
+}
+
+/*=======每一张牌=========*/
+.all_poker li{
+	position: absolute;
+}
+
+/*=======准备出的牌=========*/
+.temp_poker{
+	width: 125px;
+	height: 175px;
+	margin: 100px auto 0px;
+	position: relative;
+}
+/*=======卡背图片=========*/
+.back {
+	width:125px;
+	height: 175px;
+	background: url('../images/三国杀卡背.png');
+	background-size: 100%;
+	position: absolute;
+	z-index: 100;
+}
+/*=======玩家1,2,3牌组定位=========*/
+.play_1, .play_2, .play_3{
+	width:125px;
+	height: 175px;
+	margin: 20px auto 0px;
+	position: relative;
+}
+.play_1 li,.play_2 li,.play_3 li{
+	position: absolute;
+}
+/*=======隐藏叫地主，不叫按钮=========*/
+.getBoss{
+	display: none;
+}
+/*=======隐藏抢地主，不抢按钮=========*/
+.action{
+	display: none;
+}
+
+/*=======桌面上玩家打出的牌=========*/
+.desk_poker{
+		width:125px;
+		height:175px;
+		position:absolute;
+		margin: auto;
+		left:45%;
+		top:35%;
+		/*border:1px solid red;*/
+	}
+.desk_poker li{
+	position:absolute;
+}
+
+/*.getTheBoss{
+	display:none;
+}*/
+
+/*=======玩家1倒计时=========*/
+.clock1{
+	width: 60px;
+	height: 60px;
+	background: url('../images/时钟.png') ;
+	background-size: 100% 100%;
+	display: none;
+	position: fixed;
+	left:337px;
+	top:160px;
+}
+/*=======玩家2倒计时=========*/
+.clock2{
+	width: 60px;
+	height: 60px;
+	background: url('../images/时钟.png') ;
+	background-size: 100% 100%;
+	display: none;
+	position: absolute;
+	left:425px;
+	top:90px;
+}
+/*=======玩家3倒计时=========*/
+.clock3{
+	width: 60px;
+	height: 60px;
+	background: url('../images/时钟.png') ;
+	background-size: 100% 100%;
+	display: none;
+	position: absolute;
+	right:320px;
+	top:186px;
+}
+/*=======倒计时数字的相对位置=========*/
+.clock1 p,.clock2 p,.clock3 p{
+	position: absolute;
+	left: 20px;
+	top: 22px;
+}
+/*.bigger{
+	width: 50px;
+	height: 30px;
+}*/
+
+/*=======玩家1叫地主，不叫按钮定位=========*/
+#getBoss_location_left{
+	float: left;
+	margin-top: 70%;
+	margin-left: 88%;
+	width: 50px;
+	height: 33px;
+	line-height: 33px;
+
+}
+/*=======玩家2叫地主，不叫按钮定位=========*/
+#getBoss_location_mid{
+	position: absolute;
+	margin-top: 10%;
+	margin-left: 45%;
+
+}
+/*=======玩家3叫地主，不叫按钮定位=========*/
+#getBoss_location_right{
+	float: right;
+	margin-top: 70%;
+	margin-right: 86%;
+	width: 50px;
+	height: 33px;
+	line-height: 33px;
+}
+/*=======玩家1出牌，不出定位=========*/
+#action_location_left{
+	float: left;
+	margin-top: 20%;
+	margin-left: 88%;
+	width: 50px;
+	height: 33px;
+	line-height: 33px;
+}
+/*=======玩家2出牌，不出定位=========*/
+#action_location_mid{
+	position: absolute;
+	margin-top: -8%;
+	margin-left: 45%;
+}
+/*=======玩家3出牌，不出定位=========*/
+#action_location_right{
+	float: right;
+	margin-top: 17%;
+	margin-right: 86%;
+	width: 50px;
+	height: 33px;
+	line-height: 33px;
+}
+/*=======按钮背景=========*/
+.button_pucture{
+	width: 61px;
+	height: 27px;
+	background: url(../images/button.png) no-repeat -243px -33px;
+	border-radius: 50px;
+	background-size: 343px 140px;
+	cursor: pointer;
+	border:none;
+	color: #046273;
+	font-weight: 540;
+
+}
+/*=======按钮背景=========*/
+.rob_boss{
+	width: 61px;
+	height: 27px;
+	background: url(../images/button.png) no-repeat -243px -33px;
+	border-radius: 50px;
+	background-size: 343px 140px;
+	cursor: pointer;
+	border:none;
+	color: #046273;
+	font-weight: 540;
+
+}
+
+/*=======玩家1头像盒子定位=========*/
+.play1_box{
+	width: 135px;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	left:10px; 
+}
+/*=======玩家1头像图片=========*/
+.play1_picture{
+	width: 135px;
+	height: 147px;
+	background: url(../images/player1.png) no-repeat;
+	
+}
+/*=======玩家1名字=========*/
+.play1_id{
+	text-align: center;
+	color: rgb(3,101,100);
+	font-size: 18px;
+}
+/*=======玩家2头像盒子定位=========*/
+.play2_box{
+	width: 135px;
+	height: 150px;
+	position: absolute;
+	top: 190px;
+	left:885px; 
+}
+/*=======玩家2头像图片=========*/
+.play2_picture{
+	width: 135px;
+	height: 126px;
+	background: url(../images/player2.png) no-repeat;
+	
+}
+/*=======玩家2名字=========*/
+.play2_id{
+	text-align: center;
+	color: rgb(3,101,100);
+	font-size: 18px;
+}
+/*=======玩家3头像盒子定位=========*/
+.play3_box{
+	width: 135px;
+	height: 270px;
+	position: absolute;
+	top: 100px;
+	right:10px; 
+}
+/*=======玩家3头像图片=========*/
+.play3_picture{
+	width: 135px;
+	height: 147px;
+	background: url(../images/player3.png) no-repeat;
+	
+}
+/*=======玩家3名字=========*/
+.play3_id{
+	
+	text-align: center;
+	color: rgb(3,101,100);
+	font-size: 18px;
+}
+/*=======隐藏玩家1头像和名字=========*/
+#display1{
+	display: none;
+}
+/*=======隐藏玩家2头像和名字=========*/
+#display2{
+	display: none;
+}
+/*=======隐藏玩家3头像和名字=========*/
+#display3{
+	display: none;
+}
+.victory{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	background:url(../images/地主胜利.png) no-repeat;
+	/*border:1px solid red;*/
+	top: 110px;
+	right: 380px;
+	display: none;
+}
+/*=========胜利弹出后的积分情况界面===========*/
+
+/*=====三位玩家名字==========*/
+.victory .name div{
+	width: 200px;
+	height: 100px;
+	/*border:1px solid red;*/
+}
+/*=========三位玩家积分========*/
+.victory .integtal div{
+	height: 100px;
+	width: 200px;
+	/*border:1px solid red;*/
+}
+/*=====玩家名字盒子=====*/
+.name{
+	width: 200px;	
+	position: absolute;
+	top: 199px;
+	left: 34px;
+}
+/*=====玩家积分盒子=====*/
+.integtal{
+	width: 200px;	
+	position: absolute;
+	float: right;
+	top: 199px;
+	right: 34px;
+}
+/*=====名字字体和盒子定位=====*/
+.name div{
+	font-size: 48px;
+	font-family: '宋体';
+	position: absolute;
+	left: 18px;
+}
+/*=====玩家1名字=====*/
+.name div:nth-child(1){
+	top: 25px;	
+}
+/*=====玩家2名字=====*/
+.name div:nth-child(2){
+	top: 111px;		
+}
+/*=====玩家3名字=====*/
+.name div:nth-child(3){
+	top: 200px;	
+	
+}
+/*=====积分盒子定位=====*/
+.integtal div{
+	font-size: 48px;
+	position: absolute;
+	right: -32px;
+}
+/*=====玩家1积分=====*/
+.integtal div:nth-child(1){
+	top: 25px;	
+}
+/*=====玩家2积分=====*/
+.integtal div:nth-child(2){
+	top: 111px;		
+}
+/*=====玩家3积分=====*/
+.integtal div:nth-child(3){
+	top: 200px;	
+	
+}
+/*=====每一个玩家的积分=====*/
+.everyIntegtal{
+	width: 130px;
+	height: 37px;
+	position: absolute;
+	display: none;
+}
+/*=====积分下面的字=====*/
+.letterIntegtal{
+	position: relative;
+	top: 5px;
+	left: 25px;
+	font-size: 20px;
+	color: lime;
+}
+/*=====积分的多少=====*/
+.figure{
+	position: relative;
+	top: 5px;
+	left: 24px;
+	font-size: 20px;
+	color: lime;
+}
+/*=====右上角logo=====*/
+.logo{
+	width: 200px;
+	height: 50px;
+	background: url(../images/logo.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+

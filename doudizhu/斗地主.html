@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>海绵宝宝组</title>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+</head>
+<body>
+	<!-- 主界面的声音 -->
+	<div class="amimate">
+		<div class="Shuffle"></div>
+		<audio id="bgm" loop="loop" >
+				<source  src="./music/bg.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<!-- 背景视频 -->
+	<div class="box2">
+		<video class="box4" width="100%" height="100%" autoplay loop="loop" >
+		<source src="./images/bgvideo.mp4" ></source>
+		</video>
+	</div>
+
+	<!-- 玩家1区域 -->
+	<div class="left">
+
+	<!-- 玩家1叫地主、不叫按钮 -->
+	<p class="getBoss" id="getBoss_location_left" >
+		<input type="button" value="叫地主" data-value="1" class="button_pucture">
+		<input type="button" value="不叫" class="button_pucture">
+	</p>
+
+	<!-- 玩家1倒计时 -->
+		<div class="clock1">
+			<p></p>
+		</div>
+	
+	<!-- 玩家1牌组 -->
+	<ul class="play_1"></ul>
+
+	<!-- 玩家1出牌、不出按钮 -->
+	<p class="action" id="action_location_left">	
+			<input type="button" value="出牌" class="button_pucture" >
+			<input type="button" value="不出" class="button_pucture">
+	</p>
+		<!-- 警报 -->
+	<div class="alarm"></div>
+	<!-- 玩家1头像 -->
+	<div class="play1_box" id="display1">
+		<!-- 玩家1头像图片 -->
+		<p class="play1_picture"></p>
+		<!-- 玩家1名字 -->
+		<p class="play1_id">章鱼哥</p>
+	</div>
+	<!-- 每一个玩家的积分 -->
+	<div class="everyIntegtal">
+		<span class="letterIntegtal">积分:</span>
+		<span class="figure"></span>
+	</div>
+	<!-- 农民或者地主 -->
+	<div class="role"></div>
+</div>
+
+<div class="mid">
+	<!-- 游戏桌面 -->
+	<div class="mid_top">
+
+	<!-- 低分、倍数显示 -->
+		<div class="score">
+			<span class="multiple"></span>
+			<span class="lowScore" ></span>
+		</div>
+
+	<!-- 所有牌 -->
+		<ul class="all_poker"></ul>
+
+	<!-- 桌面上玩家打出的牌 -->
+		<ul class="desk_poker"></ul>
+		
+	</div>
+
+	<!-- 玩家2区域 -->
+	<div class="mid_end">
+		<p class="getBoss" id="getBoss_location_mid">
+		<!-- 玩家1叫地主、不叫按钮 -->
+			<input type="button" value="叫地主" data-value="2" class="button_pucture" >
+			<input type="button" value="不叫" class="button_pucture" >
+		</p>
+
+		<!-- 玩家2倒计时 -->
+		<div class="clock2">
+			<p></p>
+		</div>
+
+
+	  	<!-- 玩家2牌组 -->
+		<ul class="play_2"></ul>
+
+		<!-- 玩家2出牌、不出按钮 -->
+		<p class="action" id="action_location_mid">	
+			<input type="button" value="出牌" class="button_pucture">
+			<input type="button" value="不出" class="button_pucture">
+		</p>
+
+	<!-- 玩家2头像 -->
+		<div class="play2_box" id="display2">
+			<!-- 玩家2头像图片 -->
+			<p class="play2_picture"></p>
+			<!-- 玩家2名字 -->
+			<p class="play2_id">海绵宝宝</p>
+		</div>
+		<!-- 每一个玩家的积分 -->
+	<div class="everyIntegtal">
+		<span class="letterIntegtal">积分:</span>
+		<span class="figure"></span>
+	</div>
+	<!-- 农民或者地主 -->
+	<div class="role"></div>
+	<!-- 警报 -->
+	<div class="alarm"></div>
+	</div>
+
+</div>
+
+<!-- 玩家三区域 -->
+<div class="right">
+
+	<!-- 玩家3叫地主、不叫按钮 -->
+	<p class="getBoss" id="getBoss_location_right">
+		<input type="button" value="叫地主" data-value="3" class="button_pucture" class="rob_boss">
+		<input type="button" value="不叫" class="button_pucture" class="no_call">
+	</p>
+
+	<!-- 玩家3倒计时 -->
+	<div class="clock3">
+		<p></p>
+	</div>
+	  	
+	<!-- 玩家3牌组 -->
+	<ul class="play_3"></ul>
+
+	<!-- 玩家2出牌、不出按钮 -->
+	<p class="action" id="action_location_right">	
+			<input type="button" value="出牌" class="button_pucture">
+			<input type="button" value="不出" class="button_pucture">
+	</p>
+	<!-- 玩家3头像 -->
+	<div class="play3_box" id="display3">
+		<!-- 玩家3头像图片 -->
+		<p class="play3_picture"></p>
+		<!-- 玩家3名字 -->
+		<p class="play3_id">派大星</p>
+	</div>
+	<!-- 每一个玩家的积分 -->
+	<div class="everyIntegtal">
+		<span class="letterIntegtal">积分:</span>
+		<span class="figure"></span>
+	</div>
+<!-- 农民或者地主 -->
+	<div class="role"></div>
+	<!-- 警报 -->
+	<div class="alarm"></div>
+	<!-- 胜利后的界面 -->
+		<div class="victory">
+			<!-- 玩家名字 -->
+			<div class="name">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<!-- 玩家积分 -->
+			<div class="integtal">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<!-- 右上角logo -->
+		<div class="logo"></div>
+</body>
+<script src="./js/洗牌动画.js"></script>
+<script src="./js/斗地主.js"></script>
+<script src="./js/逻辑.js"></script>
+<script src="./js/声音.js"></script>
+</html>

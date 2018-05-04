@@ -1,0 +1,100 @@
+.weather-forecast{
+  width: 100%;  
+  height: 630rpx;
+    /* background: #29b0ff;  */
+   position: relative;
+   padding-top: 50rpx; 
+} 
+.cityCenter{
+  text-align: center;
+  color: #fff;
+  font-weight: 550;
+  font-size: 45rpx;
+  padding-bottom: 5rpx;
+}
+.timeCenter{
+    text-align: center;
+      color: #fff;
+  font-size: 25rpx;
+}
+.timeCenter text:nth-of-type(1){
+  padding-right: 15rpx;
+}
+.icon{
+  text-align: center;
+  padding: 20rpx 0;
+}
+.icon image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.iconText{
+  color: #fff;
+}
+.todayTemperature{
+  padding-top: 50rpx;
+  width: 100%;
+  height: 200rpx;
+}
+.nowTpt,.todayMaxTpt,.todayMinTpt{
+  color: #fff;
+  float: left;
+}
+.nowTpt{
+  font-size: 120rpx;
+  padding: 0 0 0 30rpx;
+}
+.todayMaxTpt,.todayMinTpt{
+  font-size: 30rpx;
+  padding: 50rpx 0rpx 0 20rpx;
+}
+.airQuality{
+  padding: 80rpx 20rpx 0 0 ;
+  font-size: 30rpx;  
+  color: #fff;  
+  float: right;
+}
+.afterWeath{
+  width: 1500rpx;   
+  height: 400rpx;
+  background: #eef8fe;
+  /* border: 1px solid red; */
+}
+.afterImg{
+  width: 150rpx;
+  height: 150rpx;
+  padding-top: 20rpx;
+}
+.afterWeathSon{
+  width: 250rpx;
+   height: 400rpx; 
+   padding: 60rpx 20rpx 0rpx 20rpx; 
+  text-align: center;
+  border-right: 1rpx solid #ccc;
+    box-sizing: border-box;
+   display: inline-block; 
+}
+.afterWeathWeek{
+  font-size: 40rpx;
+}
+.afterWeathTpt{
+  font-size: 30rpx;
+}
+.scroll-x{
+  width: 750rpx;
+  height: 400rpx;
+}
+.afterWeather{
+  font-size: 25rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+}
+.refresh image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+

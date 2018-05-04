@@ -1,0 +1,44 @@
+<!--index.wxml-->
+   <!-- today顶部内容 -->
+ <view class="weather-forecast"  style='background:{{color}}'> 
+    <!-- 刷新 -->
+    <view class='refresh'>
+        <image src='../img/refresh.png' bindtap='refresh'></image>
+    </view>
+    <!--城市  -->
+     <view class="cityCenter">
+        <picker mode="region" value='{{region}}' bindchange='bindRegionChange'>
+          {{city}}
+        </picker>
+    </view> 
+    <!--日期  -->
+     <view class='timeCenter'>
+
+        <text>{{date}}</text>
+        <text>{{week}}</text>
+    </view> 
+    <!--图标  -->
+     <view class='icon'>
+    <image src='{{todayImg}}'></image>
+        <view class='iconText'>{{todayText}}</view>
+    </view> 
+    <!--天气度数  -->
+      <view class='todayTemperature'>
+        <view class='nowTpt'>{{nowTpt}}°C</view>
+        <view class='todayMaxTpt'><view>{{todayMaxTpt}}</view><view>最高</view></view>
+        <view class='todayMinTpt'><view>{{todayMinTpt}}</view><view>最低</view></view>
+        <view class='airQuality'>风向:{{ windDirection}}</view>
+    </view> 
+ </view> 
+    <!--未来的天气  -->
+    <scroll-view scroll-x="true" class='scroll-x'>
+     <view class='afterWeath'>
+        <view class='afterWeathSon' wx:for="{{future}}" wx:key="item">
+          <view class='afterWeathWeek'>{{item.week}}</view>
+          <image class="afterImg"  src="../img/day/{{item.weather_id.fb}}.png"></image>
+          <view class='afterWeather'>{{item.weather}}</view>
+          <view class='afterWeathTpt'>{{item.temperature}}</view>
+        </view>
+     </view>
+    </scroll-view>  
+
